@@ -1,61 +1,81 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa6';
 
 
-const PreviousWebmasters = [
-  {
-    name: 'Mahfuj Alam Chowdhury',
-    role: 'UI / UX Designer',
-    img: '../../public/img/mahfuz.jpg'
-  },
-  {
-    name: 'Mahfuj Alam Chowdhury',
-    role: 'Full Stack Developer',
-    img: '../../public/img/mahfuz.jpg'  
-  },
-  {
-    name: 'Mahfuj Alam Chowdhury',
-    role: 'UI / UX Designer',
-    img: '../../public/img/mahfuz.jpg'
-  },
-  
-  
-];
 
 
 const WebMasters = [
     {
-        name: 'Mahfuj Alam Chowdhury',
-        role: 'UI / UX Designer',
-        img: '../../public/img/mahfuz.jpg'
+        name: 'Lukman Hossain',
+        role: 'Web Master(23-24)',
+        img: '../../public/img/Lukman Hossain.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+    
+      },
+      {
+        name: 'Iftekhar Ahmed',
+        role: 'Web Master(23-24)',
+        img: '../../public/img/iftekhar.jpg' ,
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury', 
       },
       {
         name: 'Mahfuj Alam Chowdhury',
-        role: 'Full Stack Developer',
-        img: '../../public/img/mahfuz.jpg'  
+        role: 'Web Master(24-25)',
+        img: '../../public/img/mahfuzzzzzzzz.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+
+
       },
       {
-        name: 'Mahfuj Alam Chowdhury',
-        role: 'UI / UX Designer',
-        img: '../../public/img/mahfuz.jpg'
+        name: 'Sourav Das Gupta',
+        role: 'Webmaster(25-26)',
+        img: '../../public/img/sourav - sourav das.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+
+
+      },
+      {
+        name: 'Nazmul Hasan Tahsin',
+        role: 'Webmaster(25-26)',
+        img: '../../public/img/Tahsin.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+
+
+      },
+      {
+        name: 'Bishal Chandro Modak',
+        role: 'Webmaster(25-26)',
+        img: '../../public/img/bishal.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+
+
       },
 ]
-const CoDevelopers = [
+const GuestDevelopers = [
     {
-        name: 'Mahfuj Alam Chowdhury',
-        role: 'UI / UX Designer',
-        img: '../../public/img/mahfuz.jpg'
-      },
-      {
-        name: 'Mahfuj Alam Chowdhury',
-        role: 'Full Stack Developer',
-        img: '../../public/img/mahfuz.jpg'  
-      },
-      {
-        name: 'Mahfuj Alam Chowdhury',
-        role: 'UI / UX Designer',
-        img: '../../public/img/mahfuz.jpg'
-      },
+        name: 'Badar Hossain',
+        role: 'Front-end Developer',
+        img: '../../public/img/Badar.jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury',
+      }
+]
+const GuestUIUX = [
+    {
+        name: 'Pulock Deb Roy',
+        role: 'UI/UX Designer',
+        img: '../../public/img/pulok[1].jpg',
+        fb: 'https://www.facebook.com/mahfuzalamchowdhury',
+        linkedin: 'https://www.linkedin.com/in/mahfuzalamchowdhury'
+,
+    }
 ]
 
 
@@ -90,57 +110,30 @@ const Developers = () => {
       </div>
 
 
-      <div className="text-center mt-6   mb-6">
-    
-        <p className="text-3xl font-extrabold text-[#ea8800] mt-6   underline">Previous Web Masters</p>
-       
-      </div>
-      {/* Previous web master Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PreviousWebmasters.map((member, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center transition-transform hover:scale-105"
-          >
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-40 h-40 object-cover rounded-full border-4 border-[#19376D] mb-4"
-            />
-            <h2 className="text-2xl font-bold text-black">{member.name}</h2>
-            <h3 className="text-lg font-medium" style={{ color: '#ea8800' }}>{member.role}</h3>
-            <div className="flex gap-4 mt-6  text-2xl text-[#19376D]">
-              <a href="#"><FaLinkedin /></a>
-              <a href="#"><FaGithub /></a>
-              <a href="#"><FaEnvelope /></a>
-            </div>
-          </div>
-        ))}
-      </div>
-
+  
       {/* current web master Cards */}
       <div className="text-center mt-6   mb-6">
     
-        <p className="text-3xl font-extrabold text-[#ea8800] mt-6   underline">Web Masters</p>
+        <p className="text-4xl font-extrabold text-[#ea8800] mt-6   underline">Web Masters</p>
        
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {WebMasters.map((member, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center transition-transform hover:scale-105"
+            className="bg-white rounded-2xl shadow-md px-35 py-12 flex flex-col items-center transition-transform hover:scale-105"
           >
             <img
               src={member.img}
               alt={member.name}
               className="w-40 h-40 object-cover rounded-full border-4 border-[#19376D] mb-4"
             />
-            <h2 className="text-2xl font-bold text-black">{member.name}</h2>
+            <h2 className="text-2xl flex items-center justify-center text-center font-bold text-black">{member.name}</h2>
             <h3 className="text-lg font-medium" style={{ color: '#ea8800' }}>{member.role}</h3>
-            <div className="flex gap-4 mt-6  text-2xl text-[#19376D]">
-              <a href="#"><FaLinkedin /></a>
-              <a href="#"><FaGithub /></a>
-              <a href="#"><FaEnvelope /></a>
+            <div className="flex gap-4 mt-6  text-2xl text-[#f7a320]">
+            <a href="#"><FaFacebook /></a>
+            <a href="#"><FaLinkedin /></a>
+              
             </div>
           </div>
         ))}
@@ -148,14 +141,14 @@ const Developers = () => {
       {/* Guest developers Cards */}
       <div className="text-center mt-6   ">
     
-        <p className="text-3xl font-extrabold text-[#ea8800] mt-6   underline">Co-Developers</p>
+        <p className="text-4xl font-extrabold text-[#ea8800] mt-14   underline">Guest Developer</p>
        
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" >
-        {CoDevelopers.map((member, index) => (
+      <div className="flex flex-row items-center justify-center mb-12 mt-5" >
+        {GuestDevelopers.map((member, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center transition-transform hover:scale-105"
+            className="bg-white rounded-2xl shadow-md px-35 py-12 flex flex-col items-center transition-transform hover:scale-105"
           >
             <img
               src={member.img}
@@ -164,10 +157,39 @@ const Developers = () => {
             />
             <h2 className="text-2xl font-bold text-black">{member.name}</h2>
             <h3 className="text-lg font-medium" style={{ color: '#ea8800' }}>{member.role}</h3>
-            <div className="flex gap-4 mt-6  text-2xl text-[#19376D]">
+            <div className="flex gap-4 mt-6  text-2xl text-[#f7a320]">
+              <a href="#"><FaFacebook /></a>
               <a href="#"><FaLinkedin /></a>
-              <a href="#"><FaGithub /></a>
-              <a href="#"><FaEnvelope /></a>
+              
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="text-center mt-6   ">
+
+      
+
+      {/* Guest graphic designer */}
+      <p className="text-4xl font-extrabold text-[#ea8800] mt-14   underline">Guest UI/UX Designer</p>
+       
+      </div>
+      <div className="flex flex-row items-center justify-center mb-12 mt-5" >
+        {GuestUIUX.map((member, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl shadow-md px-35 py-12 flex flex-col items-center transition-transform hover:scale-105"
+          >
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-40 h-40 object-cover rounded-full border-4 border-[#19376D] mb-4"
+            />
+            <h2 className="text-2xl font-bold text-black">{member.name}</h2>
+            <h3 className="text-lg font-medium" style={{ color: '#ea8800' }}>{member.role}</h3>
+            <div className="flex gap-4 mt-6  text-2xl text-[#f7a320]">
+            <a href="#"><FaFacebook /></a>
+            <a href="#"><FaLinkedin /></a>
+             
             </div>
           </div>
         ))}

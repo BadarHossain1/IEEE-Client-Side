@@ -1,15 +1,28 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import aboutBDImg from '../../public/img/R10_Meeting_11-250x188.jpg'; // Update the path to your image
 
 const IEEEBangladesh = () => {
     return (
         <div className='w-full '>
 
-            <div className="flex justify-center items-center w-full h-[300px] bg-black  mt-[1px]">
-                <h1 className="text-4xl font-bold text-center text-white *:mb-6">
-                    ABOUT – IEEE BANGLADESH SECTION
-                </h1>
-            </div>
+            <header
+                className="relative w-full h-[450px] bg-cover bg-center flex items-center justify-center text-white"
+                style={{ backgroundImage: `url(${aboutBDImg})` }}
+            >
+                {/* Blurred Background Layer */}
+                <div className="absolute inset-0 bg-cover bg-center filter blur-[6px]" style={{ backgroundImage: `url(${aboutBDImg})` }} />
+
+
+
+                {/* Text Content */}
+                <div className="relative z-2 text-center px-4">
+                    <h2 className="text-2xl md:text-5xl text-white shadow-2xl font-bold">
+                        IEEE Bangladesh Section
+                    </h2>
+
+                </div>
+            </header>
             <div className=" w-[85%] mx-auto  pt-20 pb-10 px-6 md:px-20">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-42 ">
 
@@ -28,7 +41,7 @@ const IEEEBangladesh = () => {
                             ABOUT <span className="block w-16 h-1 bg-[#f7a320]  mt-2"></span>
                         </h2>
                         <p className="text-gray-700 max-w-xl leading-relaxed text-justify">
-                        The IEEE Bangladesh Section was established in November 1993 with just 54 members. Since then, it has grown significantly, evolving into a large and dynamic community with members from various countries. Today, the IEEE Bangladesh Section ranks fifth globally, following India, the USA, China, and Canada, out of 342 sections across 160 countries. This remarkable growth underscores the section's impact and influence in the global IEEE community.
+                            The IEEE Bangladesh Section was established in November 1993 with just 54 members. Since then, it has grown significantly, evolving into a large and dynamic community with members from various countries. Today, the IEEE Bangladesh Section ranks fifth globally, following India, the USA, China, and Canada, out of 342 sections across 160 countries. This remarkable growth underscores the section's impact and influence in the global IEEE community.
 
                         </p>
                         <div className="flex gap-4 mt-6">
@@ -52,20 +65,20 @@ const IEEEBangladesh = () => {
                             <span className="block w-16 h-1 bg-[#f7a320]  mt-2"></span>
                         </h2>
                         <p className="text-gray-700 leading-relaxed text-justify">
-                        Members of the IEEE Bangladesh Section are highly engaged, continuously enhancing their initiatives and establishing connections with the global electrical engineering community. Prof. Celia Shahnaz, Chair of the IEEE Bangladesh Section, plays a pivotal role in organizing a variety of impactful student events throughout the year, celebrating the participation and achievements of students. The IEEE Bangladesh Section has received an overwhelming response from IEEE members and volunteers worldwide, reflecting its growing influence and dedication to fostering collaboration and innovation.
+                            Members of the IEEE Bangladesh Section are highly engaged, continuously enhancing their initiatives and establishing connections with the global electrical engineering community. Prof. Celia Shahnaz, Chair of the IEEE Bangladesh Section, plays a pivotal role in organizing a variety of impactful student events throughout the year, celebrating the participation and achievements of students. The IEEE Bangladesh Section has received an overwhelming response from IEEE members and volunteers worldwide, reflecting its growing influence and dedication to fostering collaboration and innovation.
                         </p>
 
                         {/* Links */}
                         <div className="mt-6 flex flex-col gap-2 text-white  ">
                             <p className="text-gray-700 leading-relaxed text-justify">Please go through this links: </p>
                             <a href="#" className="flex items-center gap-2 hover:underline">
-                                  <ExternalLink size={18} />WEB TEAM
+                                <ExternalLink size={18} />WEB TEAM
                             </a>
                             <a href="#" className="flex items-center gap-2 hover:underline">
-                                  <ExternalLink size={18} />Vice Chair Technical
+                                <ExternalLink size={18} />Vice Chair Technical
                             </a>
                             <a href="#" className="flex items-center gap-2 hover:underline">
-                                  <ExternalLink size={18} />Secretary Candidates
+                                <ExternalLink size={18} />Secretary Candidates
                             </a>
 
                         </div>
@@ -93,7 +106,7 @@ const IEEEBangladesh = () => {
                             <div className="w-16 h-1 bg-white mt-2"></div>
                         </h2>
                         <p className="text-white text-justify leading-relaxed">
-                        The IEEE Bangladesh Section is expanding rapidly, keeping pace with the ever-evolving world of technology and science by actively engaging with IEEE’s global technical societies. The section provides access to a wealth of resources, including IEEE books and eBooks, journals and papers, conferences and proceedings, among many other valuable materials. With a strong focus on student engagement, the IEEE Bangladesh Section is committed to ensuring that students fully benefit from these resources and opportunities, helping them thrive in their academic and professional pursuits.
+                            The IEEE Bangladesh Section is expanding rapidly, keeping pace with the ever-evolving world of technology and science by actively engaging with IEEE’s global technical societies. The section provides access to a wealth of resources, including IEEE books and eBooks, journals and papers, conferences and proceedings, among many other valuable materials. With a strong focus on student engagement, the IEEE Bangladesh Section is committed to ensuring that students fully benefit from these resources and opportunities, helping them thrive in their academic and professional pursuits.
                         </p>
 
 
@@ -106,7 +119,7 @@ const IEEEBangladesh = () => {
                             <div className="w-16 h-1 bg-white mt-2"></div>
                         </h2>
                         <p className="text-white text-justify leading-relaxed">
-                        IEEE Bangladesh Student Branches are making remarkable strides, creating a significant impact on a global scale. With over 1,500 students, including both graduate and non-graduate members, the branches are growing rapidly and contributing to the advancement of technology and innovation. Below is the list of student branches along with their details and links.
+                            IEEE Bangladesh Student Branches are making remarkable strides, creating a significant impact on a global scale. With over 1,500 students, including both graduate and non-graduate members, the branches are growing rapidly and contributing to the advancement of technology and innovation. Below is the list of student branches along with their details and links.
                         </p>
                         <div className="mt-6 flex flex-col gap-2 text-white ">
                             <a href="#" className="flex items-center gap-2 hover:underline">
@@ -133,7 +146,7 @@ const IEEEBangladesh = () => {
                             <div className="w-16 h-1 bg-white mt-2"></div>
                         </h2>
                         <p className="text-white text-justify leading-relaxed">
-                        The IEEE Bangladesh Section is actively engaged in various industrial sectors, working to develop the skills of its members in the Bangladesh Section (BDS). The frequency of seminars, tours, and conferences is steadily increasing, with a growing focus on professionalism and industry-relevant approaches. These events are designed to provide members with valuable insights into current industry trends and help bridge the gap between academic knowledge and practical application.
+                            The IEEE Bangladesh Section is actively engaged in various industrial sectors, working to develop the skills of its members in the Bangladesh Section (BDS). The frequency of seminars, tours, and conferences is steadily increasing, with a growing focus on professionalism and industry-relevant approaches. These events are designed to provide members with valuable insights into current industry trends and help bridge the gap between academic knowledge and practical application.
 
                         </p>
 
@@ -152,7 +165,7 @@ const IEEEBangladesh = () => {
                             <div className="w-16 h-1 bg-white mt-2"></div>
                         </h2>
                         <p className="text-white text-justify leading-relaxed">
-                        The Institute of Electrical and Electronics Engineers (IEEE) boasts a vast and diverse community, encompassing numerous specialized associations. Some of the prominent groups within IEEE include Women in Engineering (WIE), Industry Applications Society (IAS), Power and Energy Society (PES), and Young Professionals (YP), among others. These communities provide valuable opportunities for members to network, grow professionally, and contribute to advancements across various engineering disciplines.
+                            The Institute of Electrical and Electronics Engineers (IEEE) boasts a vast and diverse community, encompassing numerous specialized associations. Some of the prominent groups within IEEE include Women in Engineering (WIE), Industry Applications Society (IAS), Power and Energy Society (PES), and Young Professionals (YP), among others. These communities provide valuable opportunities for members to network, grow professionally, and contribute to advancements across various engineering disciplines.
                         </p>
 
                         {/* Links */}
@@ -182,7 +195,7 @@ const IEEEBangladesh = () => {
 
                     {/* Description */}
                     <p className="text-gray-700 text-lg leading-relaxed mb-10">
-                    The visionary founders, dedicated student members, and hardworking volunteers of the IEEE Bangladesh Section continue to achieve remarkable milestones. Over the years, the section has garnered numerous accomplishments, contributing significantly to the global IEEE community. Below is a list of some of the most notable achievements of the IEEE Bangladesh Section. To know more about it please visit-
+                        The visionary founders, dedicated student members, and hardworking volunteers of the IEEE Bangladesh Section continue to achieve remarkable milestones. Over the years, the section has garnered numerous accomplishments, contributing significantly to the global IEEE community. Below is a list of some of the most notable achievements of the IEEE Bangladesh Section. To know more about it please visit-
                     </p>
 
                     {/* Images */}

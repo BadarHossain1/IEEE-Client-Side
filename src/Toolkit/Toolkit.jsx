@@ -7,14 +7,14 @@ import megazin3 from '../../public/img/megazin3.png';
 
 const Toolkit = () => {
     return (
-        <div className="bg-white text-gray-800">
+        <div className="bg-white  text-gray-800">
 
 
 
             {/* Main Content */}
-            <div className="container mx-auto w-[95%] px-6 pb-16">
+            <div className="container pt-5 mx-auto w-[95%] px-6 pb-16">
                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl font-bold mb-4">Brand Resources</h1>
+                    <h1 className="text-4xl font-bold mb-4 ">Brand Resources</h1>
                     <p className="text-lg text-gray-600 mb-6">
                         A centralized hub for IEEE brand assets, templates, and guidelines to maintain consistency
                     </p>

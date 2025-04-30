@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImg from  '../../public/img/LUBRANCH.jpg'
 import {
     FileText,
     Code2,
@@ -27,11 +28,24 @@ const IEEELU = () => {
 
     return (
         <div className='w-full mx-auto'>
-            <div className="flex justify-center items-center w-full h-[300px] bg-black  mt-[1px]">
-                <h1 className="text-4xl font-bold text-center text-white *:mb-6">
-                    ABOUT – IEEE LU STUDENT BRANCH
-                </h1>
-            </div>
+            
+            <header
+                className="relative w-full h-[450px] bg-cover bg-center flex items-center justify-center text-white"
+                style={{ backgroundImage: `url(${aboutImg})` }}
+            >
+                {/* Blurred Background Layer */}
+                <div className="absolute inset-0 bg-cover bg-center filter blur-[6px]" style={{ backgroundImage: `url(${aboutImg})` }} />
+
+
+
+                {/* Text Content */}
+                <div className="relative z-2 text-center px-4">
+                    <h2 className="text-2xl md:text-5xl text-white shadow-2xl font-bold">
+                    IEEE LU Student Branch
+                    </h2>
+                   
+                </div>
+            </header>
             <div className=" w-[85%] mx-auto  pt-20 pb-10 px-6 md:px-20">
                 <div className="flex flex-col md:flex-row items-center justify-center gap-42 ">
 
@@ -50,7 +64,7 @@ const IEEELU = () => {
                             ABOUT <span className="block w-26 h-1 bg-yellow-400 mt-2"></span>
                         </h2>
                         <p className="text-gray-700 max-w-xl leading-relaxed text-justify">
-                        IEEE LU Student Branch is a prominent subunit of the Institute of Electrical and Electronics Engineers (IEEE), dedicated to fostering a collaborative environment among students in all fields of engineering and science. Established to promote the development of knowledge, skills, and professional growth, IEEE LU SB ensures that its members have access to all the valuable resources, benefits, and opportunities offered by IEEE. As the first internationally recognized student organization at Leading University, IEEE LU SB has been instrumental in guiding students towards successful careers, advocating for technological innovation, and expanding professional networks. Beyond academic success, the branch provides a platform for developing essential communication, management, and leadership skills through active participation in volunteer-driven activities. Members also gain hands-on experience in content writing, social media management, graphic design, user interface design, and web development, empowering them to grow both personally and professionally at IEEE LU SB.
+                            IEEE LU Student Branch is a prominent subunit of the Institute of Electrical and Electronics Engineers (IEEE), dedicated to fostering a collaborative environment among students in all fields of engineering and science. Established to promote the development of knowledge, skills, and professional growth, IEEE LU SB ensures that its members have access to all the valuable resources, benefits, and opportunities offered by IEEE. As the first internationally recognized student organization at Leading University, IEEE LU SB has been instrumental in guiding students towards successful careers, advocating for technological innovation, and expanding professional networks. Beyond academic success, the branch provides a platform for developing essential communication, management, and leadership skills through active participation in volunteer-driven activities. Members also gain hands-on experience in content writing, social media management, graphic design, user interface design, and web development, empowering them to grow both personally and professionally at IEEE LU SB.
 
                         </p>
 
@@ -65,7 +79,7 @@ const IEEELU = () => {
                 </h2>
                 <div className="h-1 w-12 bg-yellow-400 mb-6"></div>
                 <p className="text-gray-700 mb-10 leading-relaxed">
-                The governing body of IEEE LU Student Branch, comprised of seasoned and dedicated experts, plays a pivotal role in guiding this flourishing student organization. The team includes the Branch Counselor, Branch Mentor, Chair, Vice Chair, Secretary, Treasurer, as well as the Chairs of various student chapters and affinity groups. Together, they oversee all activities and operations of IEEE LU SB, collaborating with in-charges and core volunteers to ensure the smooth execution of events and initiatives. These leaders exemplify hard work and expertise, directing and organizing events, handling administrative tasks, liaising with IEEE, managing recruitment drives, and ensuring that members fully benefit from their involvement. Through their leadership, the mission of IEEE LU SB is successfully carried out, with members actively participating in national and international competitions, proudly representing LU. Beyond their guidance in IEEE-related matters, the senior members also offer support in various aspects of student life at the university, further enhancing the value of joining IEEE LU SB.
+                    The governing body of IEEE LU Student Branch, comprised of seasoned and dedicated experts, plays a pivotal role in guiding this flourishing student organization. The team includes the Branch Counselor, Branch Mentor, Chair, Vice Chair, Secretary, Treasurer, as well as the Chairs of various student chapters and affinity groups. Together, they oversee all activities and operations of IEEE LU SB, collaborating with in-charges and core volunteers to ensure the smooth execution of events and initiatives. These leaders exemplify hard work and expertise, directing and organizing events, handling administrative tasks, liaising with IEEE, managing recruitment drives, and ensuring that members fully benefit from their involvement. Through their leadership, the mission of IEEE LU SB is successfully carried out, with members actively participating in national and international competitions, proudly representing LU. Beyond their guidance in IEEE-related matters, the senior members also offer support in various aspects of student life at the university, further enhancing the value of joining IEEE LU SB.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center text-gray-700">
                     {creativeTeamItems.map((item, index) => (
@@ -79,34 +93,34 @@ const IEEELU = () => {
 
 
             <div className="w-[85%] mx-auto pt-20  px-6 md:px-20">
-                <div className="bg-[#012B52] flex flex-col md:flex-row items-center gap-10">
+                <div className="bg-[#f7a320] flex flex-col md:flex-row items-center gap-10">
                     {/* Text Section */}
                     <div className="md:w-1/2  text-white  p-8">
-                        <h2 className="text-3xl font-bold mb-2">Mission</h2>
+                        <h2 className="text-3xl font-bold mb-2 text-black">Mission</h2>
                         <div className="w-20 h-1 bg-white mb-6"></div>
                         <p className="text-sm leading-relaxed">
-                        Our goal is to build a strong community of future engineers by offering diverse opportunities for growth, both personally and professionally. Through innovative projects and teamwork, we strive to inspire curiosity, nurture creativity, and pursue excellence. By fostering an environment of continuous learning and support, we aim to help students unlock their full potential and make a meaningful impact on the world. Together, we are shaping an ecosystem that drives innovation, builds valuable connections, and empowers our members, guiding them toward success in engineering and beyond.
+                            Our goal is to build a strong community of future engineers by offering diverse opportunities for growth, both personally and professionally. Through innovative projects and teamwork, we strive to inspire curiosity, nurture creativity, and pursue excellence. By fostering an environment of continuous learning and support, we aim to help students unlock their full potential and make a meaningful impact on the world. Together, we are shaping an ecosystem that drives innovation, builds valuable connections, and empowers our members, guiding them toward success in engineering and beyond.
                         </p>
                     </div>
 
                     {/* Image Section */}
-                    <div className="md:w-1/2 ">
+                    <div className="md:w-1/2">
                         <img
                             src="https://i.ibb.co.com/VcvcfyXK/486651258-1065765888903214-8836680229870630363-n.jpg"
                             alt="Mission visual"
-                            className="shadow-lg"
+                            className="shadow-lg h-[350px]"
                         />
                     </div>
                 </div>
             </div>
             <div className="w-[85%] mx-auto pt-5 pb-10 px-6 md:px-20">
-                <div className="bg-[#012B52] flex flex-col-reverse md:flex-row-reverse items-center gap-10">
+                <div className="bg-[#f7a320] flex flex-col-reverse md:flex-row-reverse items-center gap-10">
                     {/* Text Section */}
                     <div className="md:w-1/2  text-white  p-8">
-                        <h2 className="text-3xl font-bold mb-2">Vision</h2>
+                        <h2 className="text-3xl font-bold mb-2 text-black">Vision</h2>
                         <div className="w-20 h-1 bg-white mb-6"></div>
                         <p className="text-sm leading-relaxed">
-                        Our vision is to be a LU Student Branch focused on the ongoing growth and enhancement of engineering knowledge and skills among students. We aim to foster a dynamic environment where members can refine their technical abilities, expand their professional networks, and progress in their careers. With a strong commitment to excellence, we seek to shape the future of engineering to benefit humanity by cultivating a culture of continuous learning and empowering the next generation of leaders. Through teamwork and unwavering dedication, we strive to be at the forefront of engineering education and practice, making a meaningful impact on society and inspiring future generations.
+                            Our vision is to be a LU Student Branch focused on the ongoing growth and enhancement of engineering knowledge and skills among students. We aim to foster a dynamic environment where members can refine their technical abilities, expand their professional networks, and progress in their careers. With a strong commitment to excellence, we seek to shape the future of engineering to benefit humanity by cultivating a culture of continuous learning and empowering the next generation of leaders. Through teamwork and unwavering dedication, we strive to be at the forefront of engineering education and practice, making a meaningful impact on society and inspiring future generations.
                         </p>
                     </div>
 
@@ -128,7 +142,7 @@ const IEEELU = () => {
                         <h2 className="text-4xl font-bold text-black mb-2">Events</h2>
                         <div className="w-20 h-1 bg-yellow-400 mb-6"></div>
                         <p className="text-gray-700 leading-relaxed text-justify">
-                        IEEE LU Student Branch organizes a wide variety of exceptional events, including workshops, industrial tours, seminars, and competitions, all designed to enhance members' knowledge, skills, and experiences. These local and international events offer valuable insights into the latest technological and scientific developments in their respective fields, equipping members with extensive knowledge and hands-on experience that will benefit them in their future careers. One notable event hosted by IEEE LU SB is the IEEE Xtreme Student Competition, which helps participants sharpen their technical expertise while offering them the opportunity to earn recognition. Additionally, IEEE LU SB provides free webinars to its members, further supporting their growth and learning.
+                            IEEE LU Student Branch organizes a wide variety of exceptional events, including workshops, industrial tours, seminars, and competitions, all designed to enhance members' knowledge, skills, and experiences. These local and international events offer valuable insights into the latest technological and scientific developments in their respective fields, equipping members with extensive knowledge and hands-on experience that will benefit them in their future careers. One notable event hosted by IEEE LU SB is the IEEE Xtreme Student Competition, which helps participants sharpen their technical expertise while offering them the opportunity to earn recognition. Additionally, IEEE LU SB provides free webinars to its members, further supporting their growth and learning.
 
 
                         </p>
@@ -137,7 +151,7 @@ const IEEELU = () => {
                         </p>
 
                         {/* Button */}
-                        <button className="mt-4 bg-[#012B52] hover:bg-[#011f3a] text-white px-6 py-3 rounded-md font-semibold flex items-center gap-2 shadow">
+                        <button className="mt-4 bg-[#f7a320] hover:bg-black text-white px-6 py-3 rounded-md font-semibold flex items-center gap-2 shadow">
                             <ArrowRight className="w-4 h-4" />
                             All Events
                         </button>
@@ -146,10 +160,10 @@ const IEEELU = () => {
                     {/* Calendar Section */}
                     <div className="md:w-1/3">
                         <h3 className="text-xl font-bold mb-2">EVENT CALENDER</h3>
-                        <div className="w-20 h-1 bg-yellow-400 mb-4"></div>
+                        <div className="w-20 h-1 bg-[#f7a320]mb-4"></div>
                         <div class="">
                             <div class="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-                                <div class="bg-gradient-to-r from-blue-700 to-cyan-500 text-white text-center py-4 text-xl font-semibold">
+                                <div class="bg-[#f7a320] text-white text-center py-4 text-xl font-semibold">
                                     April 2025
                                 </div>
                                 <div class="grid grid-cols-7 text-center text-gray-700 font-medium bg-gray-100">
@@ -215,14 +229,14 @@ const IEEELU = () => {
             <section className="w-[85%]  mx-auto pt-20 pb-10 px-6 md:px-20">
                 <div className="  ">
                     {/* Title */}
-                    <h2 className="text-3xl font-bold text-blue-900 mb-4">
+                    <h2 className="text-3xl font-bold text-black mb-4">
                         Achievements
                     </h2>
-                    <div className="w-16 h-1 bg-yellow-400 mb-6"></div>
+                    <div className="w-16 h-1 bg-[#f7a320] mb-6"></div>
 
                     {/* Description */}
                     <p className="text-gray-700 text-lg leading-relaxed mb-5">
-                    IEEE LU Student Branch has made notable strides in its journey, with several key achievements marking its progress. Among these, being recognized as a top-performing student branch within Region 10 is a significant accomplishment. In addition, the branch has been acknowledged for its contributions to the IEEE Bangladesh Section, receiving accolades for its active participation and leadership. IEEE LU SB members have also achieved success in various competitions, such as securing high ranks in IEEE’s regional and global contests, including web design, video contests, and technical photo submissions. The branch has earned recognition for its consistent efforts to engage and support its members, providing them with valuable experiences, professional development opportunities, and a platform to showcase their talents. These accomplishments not only enhance the profile of IEEE LU SB but also contribute positively to the career prospects of its members.
+                        IEEE LU Student Branch has made notable strides in its journey, with several key achievements marking its progress. Among these, being recognized as a top-performing student branch within Region 10 is a significant accomplishment. In addition, the branch has been acknowledged for its contributions to the IEEE Bangladesh Section, receiving accolades for its active participation and leadership. IEEE LU SB members have also achieved success in various competitions, such as securing high ranks in IEEE’s regional and global contests, including web design, video contests, and technical photo submissions. The branch has earned recognition for its consistent efforts to engage and support its members, providing them with valuable experiences, professional development opportunities, and a platform to showcase their talents. These accomplishments not only enhance the profile of IEEE LU SB but also contribute positively to the career prospects of its members.
                     </p>
 
 

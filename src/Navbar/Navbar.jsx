@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaChevronDown } from "react-icons/fa";
 
+import { useLocation } from "react-router-dom";
+
 import {
     FaCaretRight,
     FaFacebookF,
@@ -12,6 +14,32 @@ import {
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const location = useLocation();
+
+    const isEventsActive = location.pathname.startsWith("/event");
+
+    const isNewsActive = location.pathname.startsWith("/news");
+    const isAchievementActive = location.pathname.startsWith("/achievement");
+    const isPanelActive = location.pathname.startsWith("/panel");
+    const isvolunteersActive = location.pathname.startsWith("/volunteers");
+    const isdevelopersActive = location.pathname.startsWith("/developers");
+    const isjoinActive = location.pathname.startsWith("/join");
+    const isIEEEActive = location.pathname.startsWith("/IEEE");
+    const isIEEERegion10Active = location.pathname.startsWith("/IEEE-REGION-10");
+    const isIEEEBangladeshsectionActive = location.pathname.startsWith("/IEEE-Bangladesh-section");
+    const isIEEELUBRANCHActive = location.pathname.startsWith("/IEEE-LU-BRANCH");
+    const isfaqActive = location.pathname.startsWith("/faq");
+    const isblogActive = location.pathname.startsWith("/blog");
+    const isresearchPapersActive = location.pathname.startsWith("/researchPapers");
+    const ismegazineActive = location.pathname.startsWith("/megazine");
+    const isgalleryActive = location.pathname.startsWith("/gallery");
+    const istoolkitActive = location.pathname.startsWith("/toolkit");
+    const iscontactActive = location.pathname.startsWith("/contact");
+    const isWriteBlogActive = location.pathname.startsWith("/write");
+    const isAddActive = location.pathname.startsWith("/addResearch");
+
+
+
 
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [teamOpen, setTeamOpen] = useState(false);
@@ -64,14 +92,14 @@ const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <img src="../../public/img/ieee_logo.png" alt="IEEE Logo" className=" w-50 mr-4" />
                     </div>
-                    <li><a href="/" className='md:text-xl text-2xl lg:text-[18px] '><span className='hover:text-black'>Home</span></a></li>
+                    <li><a href="/" className='md:text-xl text-2xl lg:text-[18px] '><span className={`hover:text-black `}>Home</span></a></li>
 
 
                     {/* Activities Dropdown */}
                     <li className="relative group">
                         <button onMouseEnter={() => setIsActivitiesOpen(!isActivitiesOpen)} onMouseLeave={() => setIsActivitiesOpen(!isActivitiesOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className='hover:text-black '>Activities</span>
+                                <span className={`hover:text-black ${isEventsActive ? "text-black border-b-2  border-black " : "text-white "} ${isNewsActive ? "text-black border-b-2  border-black " : "text-white "} ${isAchievementActive ? "text-black border-b-2  border-black " : "text-white "}`}>Activities</span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isActivitiesOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -82,7 +110,7 @@ const Navbar = () => {
                         <div className="absolute top-full left-0 mt-8 w-64  bg-black text-white rounded shadow-lg z-20 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
                             <ul>
                                 <li>
-                                    <Link to="/event" className="block px-4 py-2 hover:bg-[#f7a320]">
+                                    <Link to="/event" className={`block px-4 py-2 hover:bg-[#f7a320] `}>
                                         Events
                                     </Link>
                                 </li>
@@ -107,7 +135,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsMembersOpen(!isMembersOpen)} onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className='hover:text-black '>Members</span>
+                                <span className={`hover:text-black ${isPanelActive ? "text-black border-b-2  border-black " : "text-white "} ${isvolunteersActive ? "text-black border-b-2  border-black " : "text-white "} ${isdevelopersActive ? "text-black border-b-2  border-black " : "text-white "}`}>Members</span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isMembersOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -174,7 +202,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsAboutOpen(!isAboutOpen)} onMouseLeave={() => setIsAboutOpen(!isAboutOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className='hover:text-black '>About</span>
+                                <span className={`hover:text-black ${isjoinActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEEActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEERegion10Active ? "text-black border-b-2  border-black " : "text-white "} ${isIEEEBangladeshsectionActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEELUBRANCHActive ? "text-black border-b-2  border-black " : "text-white "}  ${isfaqActive ? "text-black border-b-2  border-black " : "text-white "} `}>About</span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isAboutOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -222,7 +250,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsPublicationsOpen(!isPublicationsOpen)} onMouseLeave={() => setIsPublicationsOpen(!isPublicationsOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className='hover:text-black '>Publications</span>
+                                <span className={`hover:text-black ${isblogActive ? "text-black border-b-2  border-black " : "text-white "} ${isresearchPapersActive ? "text-black border-b-2  border-black " : "text-white "} ${ismegazineActive ? "text-black border-b-2  border-black " : "text-white "}${isgalleryActive ? "text-black border-b-2  border-black " : "text-white "} ${istoolkitActive ? "text-black border-b-2  border-black " : "text-white "}`}>Publications</span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isPublicationsOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -261,12 +289,12 @@ const Navbar = () => {
                         </div>
                     </li>
 
-                    <li><Link to={"/contact"} className='md:text-xl text-2xl lg:text-[18px]' ><span className='hover:text-black'>Contact</span></Link></li>
+                    <li><Link to={"/contact"} className='md:text-xl text-2xl lg:text-[18px]' ><span className={`hover:text-black ${iscontactActive ? "text-black border-b-2  border-black " : "text-white "} `}>Contact</span></Link></li>
 
                     <li className="relative group">
                         <button onMouseEnter={() => setIsGetInvolvedOpen(!isGetInvolvedOpen)} onMouseLeave={() => setIsGetInvolvedOpen(!isGetInvolvedOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className='hover:text-black '>Get Involved</span>
+                                <span className={`hover:text-black  ${isAddActive ? "text-black border-b-2  border-black " : "text-white "} ${isWriteBlogActive ? "text-black border-b-2  border-black " : "text-white "}`}>Get Involved</span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isGetInvolvedOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -279,7 +307,7 @@ const Navbar = () => {
                             <ul>
 
                                 <li>
-                                    <Link to="/blogWriting" className="block px-4 py-2 hover:bg-[#f7a320]">
+                                    <Link to="/write" className="block px-4 py-2 hover:bg-[#f7a320]">
                                         Write A Blog
                                     </Link>
                                 </li>
@@ -475,7 +503,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/blogWriting" className="block px-4 py-2 hover:bg-[#f7a320]">
+                                        <Link to="/write" className="block px-4 py-2 hover:bg-[#f7a320]">
                                             Write A Blog
                                         </Link>
                                     </li>
