@@ -16,6 +16,9 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     const location = useLocation();
 
+
+
+    const isHomeActive = location.pathname === "/";
     const isEventsActive = location.pathname.startsWith("/event");
 
     const isNewsActive = location.pathname.startsWith("/news");
@@ -105,7 +108,10 @@ const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <img src="../../public/img/ieee_logo.png" alt="IEEE Logo" className=" w-50 mr-4" />
                     </div>
-                    <li><a href="/" className='md:text-xl text-2xl lg:text-[18px] '><span className={`hover:text-black `}>Home</span></a></li>
+                    <li><a href="/" className='md:text-xl text-2xl lg:text-[18px] '><span className={`hover:text-black ${isHomeActive
+                        ? "text-black border-b-2 border-black"
+                        : "text-white"
+                        }`}>Home</span></a></li>
 
 
                     {/* Activities Dropdown */}
