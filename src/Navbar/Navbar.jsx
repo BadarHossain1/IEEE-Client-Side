@@ -37,6 +37,19 @@ const Navbar = () => {
     const iscontactActive = location.pathname.startsWith("/contact");
     const isWriteBlogActive = location.pathname.startsWith("/write");
     const isAddActive = location.pathname.startsWith("/addResearch");
+    const isPCActive = location.pathname.startsWith("/programCoordinator");
+    const isPublicityCoordinatorActive = location.pathname.startsWith("/publicity-coordinator");
+    const isPNCActive = location.pathname.startsWith("/publication-newsletter-coordinator");
+    const isCREActive = location.pathname.startsWith("/chief-reporting-executive");
+    const isPEActive = location.pathname.startsWith("/photography-executive");
+    const isLEActive = location.pathname.startsWith("/logistic-executive");
+    const isACMActive = location.pathname.startsWith("/acm-coordinator");
+    const isMDCActive = location.pathname.startsWith("/membership-development-coordinator");
+    const isWEBActive = location.pathname.startsWith("/webmaster");
+    const isGDEActive = location.pathname.startsWith("/graphics-design-executive");
+    const isVCEActive = location.pathname.startsWith("/video-content-executive");
+
+
 
 
 
@@ -99,7 +112,14 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsActivitiesOpen(!isActivitiesOpen)} onMouseLeave={() => setIsActivitiesOpen(!isActivitiesOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className={`hover:text-black ${isEventsActive ? "text-black border-b-2  border-black " : "text-white "} ${isNewsActive ? "text-black border-b-2  border-black " : "text-white "} ${isAchievementActive ? "text-black border-b-2  border-black " : "text-white "}`}>Activities</span>
+                                <span
+                                    className={`hover:text-black ${isEventsActive || isNewsActive || isAchievementActive
+                                        ? "text-black border-b-2 border-black"
+                                        : "text-white"
+                                        }`}
+                                >
+                                    Activities
+                                </span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isActivitiesOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -135,7 +155,14 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsMembersOpen(!isMembersOpen)} onMouseLeave={() => setIsMembersOpen(!isMembersOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className={`hover:text-black ${isPanelActive ? "text-black border-b-2  border-black " : "text-white "} ${isvolunteersActive ? "text-black border-b-2  border-black " : "text-white "} ${isdevelopersActive ? "text-black border-b-2  border-black " : "text-white "}`}>Members</span>
+                                <span
+                                    className={`hover:text-black ${isPanelActive || isvolunteersActive || isPNCActive || isdevelopersActive || isPCActive || isPublicityCoordinatorActive || isCREActive || isPEActive || isLEActive || isACMActive || isMDCActive || isWEBActive || isGDEActive || isVCEActive
+                                        ? "text-black border-b-2 border-black"
+                                        : "text-white"
+                                        }`}
+                                >
+                                    Members
+                                </span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isMembersOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -202,7 +229,19 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsAboutOpen(!isAboutOpen)} onMouseLeave={() => setIsAboutOpen(!isAboutOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className={`hover:text-black ${isjoinActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEEActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEERegion10Active ? "text-black border-b-2  border-black " : "text-white "} ${isIEEEBangladeshsectionActive ? "text-black border-b-2  border-black " : "text-white "} ${isIEEELUBRANCHActive ? "text-black border-b-2  border-black " : "text-white "}  ${isfaqActive ? "text-black border-b-2  border-black " : "text-white "} `}>About</span>
+                                <span
+                                    className={`hover:text-black ${isjoinActive ||
+                                        isIEEEActive ||
+                                        isIEEERegion10Active ||
+                                        isIEEEBangladeshsectionActive ||
+                                        isIEEELUBRANCHActive ||
+                                        isfaqActive
+                                        ? "text-black border-b-2 border-black"
+                                        : "text-white"
+                                        }`}
+                                >
+                                    About
+                                </span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isAboutOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -250,7 +289,18 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsPublicationsOpen(!isPublicationsOpen)} onMouseLeave={() => setIsPublicationsOpen(!isPublicationsOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className={`hover:text-black ${isblogActive ? "text-black border-b-2  border-black " : "text-white "} ${isresearchPapersActive ? "text-black border-b-2  border-black " : "text-white "} ${ismegazineActive ? "text-black border-b-2  border-black " : "text-white "}${isgalleryActive ? "text-black border-b-2  border-black " : "text-white "} ${istoolkitActive ? "text-black border-b-2  border-black " : "text-white "}`}>Publications</span>
+                                <span
+                                    className={`hover:text-black ${isblogActive ||
+                                        isresearchPapersActive ||
+                                        ismegazineActive ||
+                                        isgalleryActive ||
+                                        istoolkitActive
+                                        ? "text-black border-b-2 border-black"
+                                        : "text-white"
+                                        }`}
+                                >
+                                    Publications
+                                </span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isPublicationsOpen ? "rotate-180" : "rotate-0"
                                         }`}
@@ -294,7 +344,14 @@ const Navbar = () => {
                     <li className="relative group">
                         <button onMouseEnter={() => setIsGetInvolvedOpen(!isGetInvolvedOpen)} onMouseLeave={() => setIsGetInvolvedOpen(!isGetInvolvedOpen)} className="md:text-xl text-2xl lg:text-[18px]">
                             <div className='flex items-center gap-2'>
-                                <span className={`hover:text-black  ${isAddActive ? "text-black border-b-2  border-black " : "text-white "} ${isWriteBlogActive ? "text-black border-b-2  border-black " : "text-white "}`}>Get Involved</span>
+                                <span
+                                    className={`hover:text-black ${isAddActive || isWriteBlogActive
+                                        ? "text-black border-b-2 border-black"
+                                        : "text-white"
+                                        }`}
+                                >
+                                    Get Involved
+                                </span>
                                 <FaChevronDown
                                     className={`transition-transform text-sm duration-300 ${isGetInvolvedOpen ? "rotate-180" : "rotate-0"
                                         }`}
